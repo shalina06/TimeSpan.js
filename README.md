@@ -2,6 +2,10 @@
 
 ## is a library for Node.js or the browser that allows you to easily manipulate and format lengths of time.
 
+### Installation
+
+	npm install TimeSpan.js
+
 ### AMD module support
 
 TimeSpan.js supports loading as an AMD module, it detects AMD like:
