@@ -1,4 +1,6 @@
-# TimeSpan.js is a library for Node.js or the browser that allows you to easily manipulate and format lengths of time.
+# TimeSpan.js
+
+## is a library for Node.js or the browser that allows you to easily manipulate and format lengths of time.
 
 ### AMD module support
 

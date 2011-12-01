@@ -1,0 +1,13 @@
+{
+  "author": "Rob Middleton <rob@i.tv>",
+  "name": "TimeSpan.js",
+  "description": "Manage lengths of time with Javascript",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/idottv/TimeSpan.js.git"
+  },
+  "main": "TimeSpan.js",
+  "dependencies": {},
+  "devDependencies": {}
+}
