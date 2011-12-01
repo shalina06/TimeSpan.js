@@ -4,14 +4,34 @@ is a library for Node.js or the browser that allows you to easily manipulate and
 
 ## Installation
 
+### Node.js
+
 	npm install TimeSpan.js
 
-### AMD module support
+	var TimeSpan = require("TimeSpan.js")
+
+### Browser
+
+Download [Minified](http://cloud.github.com/downloads/idottv/TimeSpan.js/TimeSpan.min.js) [Uncompressed](https://raw.github.com/idottv/TimeSpan.js/master/TimeSpan.js)
+
+#### AMD module support
 
 TimeSpan.js supports loading as an AMD module, it detects AMD like:
 	if (typeof define !== 'undefined' && define.amd)
 
+
+	require(["TimeSpan"],
+	function (TimeSpan) {
+		
+	})
+
 If AMD is not supported TimeSpan.js will be located at window.TimeSpan
+
+	<script src="TimeSpan.js"></script>
+
+	window.TimeSpan
+
+
 
 ## Documentation
 
@@ -107,7 +127,7 @@ If you want to put the actual letter in the string without it being replaced or 
 
 
 
-### Running tests
+## Running tests
 	
 	npm install nodeunit
 	sudo npm install -g nodeunit # for global `nodeunit` command
