@@ -1,8 +1,8 @@
 # TimeSpan.js
 
-## is a library for Node.js or the browser that allows you to easily manipulate and format lengths of time.
+is a library for Node.js or the browser that allows you to easily manipulate and format lengths of time.
 
-### Installation
+## Installation
 
 	npm install TimeSpan.js
 
@@ -104,3 +104,11 @@ If you want to put the actual letter in the string without it being replaced or 
 	
 	TimeSpan(0, 28, 7, 5, 1).format("^hh:mm:ss") // 29:07:28
 	TimeSpan(0, 28, 7, 5, 1).format("zzz ~^~h~h~hh ^ ~^h ~^~h~h~h^h ^hhh hhh zzz") // zzz ^hhh4 ^ ^4 ^hhh52 052 004 zzz
+
+
+
+### Running tests
+	
+	npm install nodeunit
+	sudo npm install -g nodeunit # for global `nodeunit` command
+	nodeunit test.js

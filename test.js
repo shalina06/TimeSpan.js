@@ -1,45 +1,45 @@
-var TimeSpan = require('itv/public/TimeSpan')
+var TimeSpan = require('./TimeSpan')
 
 exports.emptyConstructor = function (assert) {
 	var ts = TimeSpan()
 	assert.equal(0, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.dateDiffConstructor = function (assert) {
 	var ts = TimeSpan(new Date(1322589331), new Date(946684800))
 	assert.equal(375904531, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.millisecondsConstructor = function (assert) {
 	var ts = TimeSpan(28)
 	assert.equal(28, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.secondsConstructor = function (assert) {
 	var ts = TimeSpan(28, 20)
 	assert.equal(20028, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.minutesConstructor = function (assert) {
 	var ts = TimeSpan(28, 20, 7)
 	assert.equal(440028, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.hoursConstructor = function (assert) {
 	var ts = TimeSpan(28, 20, 7, 5)
 	assert.equal(18440028, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.daysConstructor = function (assert) {
 	var ts = TimeSpan(28, 20, 7, 5, 2)
 	assert.equal(191240028, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.total = function (assert) {
@@ -49,7 +49,7 @@ exports.total = function (assert) {
 	assert.equal(3187, ts.total("minutes"))
 	assert.equal(53, ts.total("hours"))
 	assert.equal(2, ts.total("days"))
-	assert.finish()
+	assert.done()
 }
 
 exports.get = function (assert) {
@@ -59,7 +59,7 @@ exports.get = function (assert) {
 	assert.equal(7, ts.get("minutes"))
 	assert.equal(5, ts.get("hours"))
 	assert.equal(2, ts.get("days"))
-	assert.finish()
+	assert.done()
 }
 
 exports.add = function (assert) {
@@ -81,7 +81,7 @@ exports.add = function (assert) {
 	ts.add("day")
 	
 	assert.equal(277640028, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.subtract = function (assert) {
@@ -103,7 +103,7 @@ exports.subtract = function (assert) {
 	ts.subtract("day")
 
 	assert.equal(90061001, ts.total("milliseconds"))
-	assert.finish()
+	assert.done()
 }
 
 exports.format = function (assert) {
@@ -140,5 +140,9 @@ exports.format = function (assert) {
 
 	assert.equal("zzz ^hhh4 ^ ^4 ^hhh52 052 004 zzz", ts.format("zzz ~^~h~h~hh ^ ~^h ~^~h~h~h^h ^hhh hhh zzz"))
 	
-	assert.finish()
+	assert.done()
+}
+
+if (module == require.main) {
+	require('nodeunit').testCase(exports)
 }
